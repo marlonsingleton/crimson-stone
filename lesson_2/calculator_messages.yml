@@ -1,0 +1,63 @@
+
+# calculator_message.yml
+
+welcome: "Welcome to Calculator! Enter your name: "
+valid_name: "Make sure to enter a valid name."
+first_number: "What's the first number?"
+valid_number: "Hmmm.... that doesn't look like a valid number."
+second_number: "What's the second number?"
+ops_selection: "Must chose 1, 2, 3, 4"
+calculate_again: "Do you want to perform another calculation? ('Y' to calculate again)"
+
+bp:
+  welcome: "Bem-vindo a calculadora! Digite seu nome: "
+  greeting: "Oi"
+  valid_name: "Certifique-se de introduzir um nome valido."
+  first_number: "Qual é o primeiro número ?"
+  valid_number: "Hmmm .... que não se parece com um número válido."
+  second_number: "O que é o segundo número ?"
+  ops_selection: "Deve escolheu 1, 2 , 3, 4 "
+  calculate_again: "Você quer executar outro cálculo ? ('Y' para calcular novamente)"
+
+en:
+  welcome: "Welcome to Calculator! Enter your name: "
+  greeting: "Hi"
+  valid_name: "Make sure to enter a valid name."
+  first_number: "What's the first number?"
+  valid_number: "Hmmm...that doesn't look like a valid number."
+  second_number: "What's the second number?"
+  ops_selection: "Must chose 1, 2, 3, 4"
+  calculate_again: "Do you want to perform another calculation? ('Y' to calculate again)"
+
+es:
+  welcome: "Bienvenido a la calculadora! Entre su nombre: "
+  greeting: "Hola"
+  valid_name: "Asegurese de entrar un nombre valido."
+  first_number: "¿Cuál es el primer número ? "
+  valid_number: "Hmmm ... que no se ve como un número válido . "
+  second_number: "¿Cuál es el segundo número ? "
+  ops_selection: "Debe elegir 1 , 2 , 3 , 4 "
+  calculate_again: " ¿Desea realizar otro cálculo ? ('Y' para calcular de nuevo) "
+
+
+de:
+  welcome: "Willkommen auf Taschenrechner ! Gib deinen Namen ein: "
+  greeting: "Hallo"
+  valid_name: "Achten Sie darauf, einen gultigen Namen eingeben. "
+  first_number: "Was ist die erste Zahl ? "
+  valid_number: "Hmmm ... das sieht nicht wie eine gültige Zahl . "
+  second_number: "Was ist die zweite Nummer ? "
+  ops_selection: "Must wählte 1, 2 , 3, 4 "
+  calculate_again: "Möchten Sie eine andere Berechnung ausführen wollen ? ( 'Y' wieder zu berechnen ) "
+
+
+fr:
+  welcome: "Bienvenue calculatrice! Entrez votre nom: "
+  greeting: "Salut"
+  valid_name: "Assurez-vous d'entrer un nom valide."
+  first_number: "Quel est le premier numéro ? "
+  valid_number: " Hmmm ... qui ne ressemble pas à un numéro valide . "
+  second_number: "Quel est le deuxième numéro ? "
+  ops_selection: " Doit choisir 1 , 2 , 3, 4 "
+  calculate_again: "Est-ce que vous voulez effectuer un autre calcul ? ( 'Y' pour calculer à nouveau ) "
+

@@ -1,0 +1,7 @@
+These setting were changed to false
+
+Style/MethodCallParantheses:
+Style/BracesAroundHashParameters:
+Style/CommentAnnotation:
+Style/StringLiterals:
+Metrics/LineLength

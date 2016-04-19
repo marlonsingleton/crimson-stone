@@ -1,0 +1,8 @@
+rock crushes lizard
+lizard posions spock
+spock smashes scissors
+scissors decapitates lizard
+lizard eats paper
+paper disproves spock
+spock vaporizes rock
+
