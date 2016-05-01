@@ -68,11 +68,11 @@ def valid_move?(moves, row_column)
 end
 
 row_column = " "
-loop do # see if user would to play again
+loop do # see if user would like to play again
   moves = board_assignment(my_choices)
   loop do # play until someone wins
     board_display(moves)
-    loop do # check if square if full
+    loop do # check if square is full
       row = " "
       loop do
         puts "Select a row (1, 2, 3): "
