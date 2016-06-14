@@ -13,6 +13,7 @@ class MyCar
     puts "Go faster!!!"
     self.speed += 5
     self.speed = self.speed * option
+    "You're now going #{self.speed} miles per hour!"
   end
 
   def brake
@@ -30,12 +31,11 @@ class MyCar
 end
 
 first_car = MyCar.new(2015, "Black", "Nissan")
-puts first_car.speed
-puts first_car.year
-puts first_car.color
-puts first_car.model
+puts "You're now going #{first_car.speed} miles an hour!!"
 puts first_car.speed_up
 puts first_car.speed_up
 puts first_car.speed_up(5)
-puts first_car.spray_paint("Orange")
-puts "My #{first_car.year} #{first_car.model} is now #{first_car.color} and going #{first_car.speed} MPH!"
+puts "Let's spray paint your #{first_car.color} #{first_car.model}. What color would you like?"
+answer = gets.chomp
+puts "We've painted your car #{first_car.spray_paint(answer)}."
+puts "Your #{first_car.year} #{first_car.model} is now #{first_car.color} and going #{first_car.speed} MPH!"

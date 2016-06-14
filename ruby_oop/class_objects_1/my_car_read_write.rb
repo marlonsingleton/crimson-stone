@@ -1,6 +1,6 @@
 
 class MyCar
-  attr_writer :color, :speed
+  attr_accessor :color, :speed
   attr_reader :year, :model
 
   def initialize(year, color, model)
@@ -13,7 +13,7 @@ class MyCar
   def speed_up(option = 1)
     puts "Go faster!!!"
     self.speed += 5
-    self.speed * option
+    "You're now going #{self.speed * option} miles per hour!"
   end
 
   def brake
@@ -27,7 +27,7 @@ class MyCar
 end
 
 first_car = MyCar.new(2015, "Black", "Nissan")
-puts first_car.speed
+puts "You're speed is #{first_car.speed} miles per hour."
 puts first_car.year
 puts first_car.color
 puts first_car.model

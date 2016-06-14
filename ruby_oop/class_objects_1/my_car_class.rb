@@ -12,7 +12,7 @@ class MyCar
   def speed_up(option = 1)
     puts "Go faster!!!"
     self.speed += 5
-    self.speed * option
+    "You're now going #{self.speed * option} miles per hour!"
   end
 
   def brake
