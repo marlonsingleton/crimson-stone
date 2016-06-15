@@ -1,5 +1,5 @@
 def rot13(messages)
-  num_result = messages.map do |message|
+  conv_result = messages.map do |message|
     num_arrays = message.split.map do |word|
       word.chars.map do |char|
         if ("A".."M").cover?(char) || ("a".."m").cover?(char)
@@ -16,7 +16,7 @@ def rot13(messages)
       new_word.join
     end
   end
-  num_result.join(" ")
+  conv_result.join(" ")
 end
 
 phrase = ["Hello this is the ROTD13 cipher.", "It will be applied to this phrase now."]
