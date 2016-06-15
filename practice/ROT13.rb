@@ -1,4 +1,4 @@
-def rot13(string)
+def rotd13(string)
   num_result = string.split.map do |word|
     word.chars.map do |char|
       if ("A".."M").cover?(char) || ("a".."m").cover?(char)
@@ -19,4 +19,4 @@ end
 phrase = "Hello the ROTD13 cipher will be applied to this phrase."
 
 p phrase
-p rot13(phrase)
+p rotd13(phrase)
