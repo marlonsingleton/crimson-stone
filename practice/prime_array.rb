@@ -1,4 +1,4 @@
-array = (1..100000).to_a
+array = (1..100).to_a
 
 outcome = array.select do |x|
     test_array = []
