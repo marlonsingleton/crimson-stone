@@ -65,7 +65,6 @@ class Plays < Board
   end
 
   def decide_row
-    # will rethink this logic when refactoring
     if @row == "1" && moves[0, 3].include?(" ")
       self.row_one
     elsif @row == "2" && moves[3, 3].include?(" ")
@@ -107,7 +106,7 @@ class Plays < Board
 end
 
 class Game < Plays
-  attr_accessor :human, :computer 
+  attr_accessor :human, :computer, :combos 
   attr_reader :welcome
 
   def welcome
@@ -121,8 +120,12 @@ class Game < Plays
   end
 
   def ask_names
-    puts "What is your name?"
-    @human = gets.chomp.capitalize
+    loop do
+      puts "What is your name?"
+      @human = gets.chomp.capitalize
+      break if @human.empty? == false
+      puts "You must enter a name!"
+    end
     @computer = ["Mark V", "Sonny", "Hal", "Linux"].sample
   end
 
@@ -132,28 +135,28 @@ class Game < Plays
     return true if self.board_full
   end
 
+  def winning_combos
+    @combos = []
+    combos << moves[0, 3]
+    combos << moves[3, 3]
+    combos << moves[6, 3]
+    combos << moves.values_at(0, 3, 6)
+    combos << moves.values_at(1, 4, 7)
+    combos << moves.values_at(2, 5, 8)
+    combos << moves.values_at(0, 4, 8)
+    combos << moves.values_at(2, 4, 6)
+  end
+
   def human_outcomes
-    # will try to refactor and enumerate possible outcomes
-    return true if moves[0, 3] == @human_wins
-    return true if moves[3, 3] == @human_wins
-    return true if moves[6, 3] == @human_wins
-    return true if moves.values_at(0, 3, 6) == @human_wins
-    return true if moves.values_at(1, 4, 7) == @human_wins
-    return true if moves.values_at(2, 5, 8) == @human_wins
-    return true if moves.values_at(0, 4, 8) == @human_wins
-    return true if moves.values_at(2, 4, 6) == @human_wins
+    self.winning_combos
+    outcome = combos.select { |combo| combo == human_wins}
+    outcome.flatten == human_wins
   end
 
   def computer_outcomes
-    # will try to refactor and enumerate possible outcomes
-    return true if moves[0, 3] == @computer_wins
-    return true if moves[3, 3] == @computer_wins
-    return true if moves[6, 3] == @computer_wins
-    return true if moves.values_at(0, 3, 6) == @computer_wins
-    return true if moves.values_at(1, 4, 7) == @computer_wins
-    return true if moves.values_at(2, 5, 8) == @computer_wins
-    return true if moves.values_at(0, 4, 8) == @computer_wins
-    return true if moves.values_at(2, 4, 6) == @computer_wins
+    self.winning_combos
+    outcome = combos.select { |combo| combo == computer_wins}
+    outcome.flatten == computer_wins
   end
 
   def board_full
@@ -163,7 +166,7 @@ class Game < Plays
   def who_won?
     puts "#{@human}, You won!" if human_outcomes
     puts "#{@computer} won!" if computer_outcomes
-    if human_outcomes == nil && computer_outcomes == nil
+    if human_outcomes == false && computer_outcomes == false
       puts "It's a draw!"
     end
   end
