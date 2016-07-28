@@ -1,4 +1,3 @@
-
 def fizzbuzz(num1, num2)
   outcome = []
   (num1..num2).to_a.each do |num|
