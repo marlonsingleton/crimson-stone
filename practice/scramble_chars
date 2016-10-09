@@ -1,0 +1,11 @@
+def scramble_chars(outcome)
+  random_set = []
+  outcome.chars.each do |char|
+  	if char != " "
+  	  random_set << ("A".."Z").to_a.sample
+  	else
+      random_set << " "
+    end
+  end
+  random_set.join
+end
