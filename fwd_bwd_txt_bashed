@@ -1,0 +1,19 @@
+VAR=$1
+FWD=""
+BWD=""
+
+for ((i=0; i<${#VAR}; i++))
+do
+        echo ${VAR:$i:1}
+        FWD=${FWD}${VAR:$i:1}
+done
+echo $FWD
+
+echo ""
+
+for ((i=${#VAR}-1; i>=0; i--))
+do
+        echo ${VAR:$i:1}
+        BWD=${BWD}${VAR:$i:1}
+done
+echo $BWD
