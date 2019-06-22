@@ -1,1 +1,1 @@
-learning ruby
+Exploring and Learning Ruby
